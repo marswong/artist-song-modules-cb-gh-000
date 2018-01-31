@@ -12,19 +12,19 @@ describe Song do
   end
 
   it "can have a name" do
-    song.name = "Jump Around"
-    expect(song.name).to eq("Jump Around")
+    song.name = "Begin Again"
+    expect(song.name).to eq("Begin Again")
   end
 
   it 'converts its name to a url friendly parameter' do
-    song.name = "Jump Around"
-    expect(song.to_param).to eq("jump-around")
+    song.name = "Wildest Dreams"
+    expect(song.to_param).to eq("wildest-dreams")
   end
 
   it "has an artist" do
-    song.artist = Artist.new.tap {|a| a.name = "miley"}
+    song.artist = Artist.new.tap {|a| a.name = "taylor"}
     expect(song.artist).to be_a(Artist)
-    expect(song.artist.name).to eq("miley")
+    expect(song.artist.name).to eq("taylor")
   end
 
   describe "Class methods" do
@@ -37,8 +37,8 @@ describe Song do
     end
 
     it "can find a song by name" do
-      song.name = "Jump Around"
-      expect(Song.find_by_name("Jump Around")).to eq(song)
+      song.name = "Wildest Dreams"
+      expect(Song.find_by_name("Wildest Dreams")).to eq(song)
     end
 
     it "can reset the songs that have been created" do

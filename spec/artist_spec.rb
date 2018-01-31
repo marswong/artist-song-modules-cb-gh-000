@@ -17,13 +17,13 @@ describe Artist do
   end
 
   it "can have a name" do
-    artist.name = "Adele"
-    expect(artist.name).to eq("Adele")
+    artist.name = "Taylor"
+    expect(artist.name).to eq("Taylor")
   end
 
   it 'converts its name to a url friendly parameter' do
-    artist.name = 'Miley Cyrus'
-    expect(artist.to_param).to eq("miley-cyrus")
+    artist.name = 'Taylor Swift'
+    expect(artist.to_param).to eq("taylor-swift")
   end
 
   describe "Class methods" do
@@ -36,8 +36,8 @@ describe Artist do
     end
 
     it "can find an artist by name" do
-      artist.name = 'Miley Cyrus'
-      expect(Artist.find_by_name('Miley Cyrus')).to eq(artist)
+      artist.name = 'Taylor Swift'
+      expect(Artist.find_by_name('Taylor Swift')).to eq(artist)
     end
 
     it "can reset the artists that have been created" do
