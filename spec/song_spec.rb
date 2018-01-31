@@ -12,8 +12,8 @@ describe Song do
   end
 
   it "can have a name" do
-    song.name = "Jump Around"
-    expect(song.name).to eq("Jump Around")
+    song.name = "Begin Again"
+    expect(song.name).to eq("Begin Again")
   end
 
   it 'converts its name to a url friendly parameter' do
